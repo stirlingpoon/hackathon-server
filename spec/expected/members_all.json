@@ -1,0 +1,104 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "email": "john.smith@credit-suisse.com",
+      "password": "password",
+      "ext_directory_key": null,
+      "ext_photo_link": null,
+      "skills": [
+        {
+          "id": 1,
+          "name": "JAVA",
+          "description": "Java Programming Skills"
+        },
+        {
+          "id": 2,
+          "name": "CONCURRENCY",
+          "description": "Concurrent programming techniques"
+        },
+        {
+          "id": 3,
+          "name": "FIX",
+          "description": "FIX protocol"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Mike Johns",
+      "email": "mike.johns@credit-suisse.com",
+      "password": "password",
+      "ext_directory_key": null,
+      "ext_photo_link": null,
+      "skills": [
+        {
+          "id": 2,
+          "name": "CONCURRENCY",
+          "description": "Concurrent programming techniques"
+        },
+        {
+          "id": 4,
+          "name": "C++",
+          "description": null
+        },
+        {
+          "id": 6,
+          "name": "Angular.JS",
+          "description": null
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Peter Stevens",
+      "email": "peter.stevens@credit-suisse.com",
+      "password": "password",
+      "ext_directory_key": null,
+      "ext_photo_link": null,
+      "skills": [
+        {
+          "id": 3,
+          "name": "FIX",
+          "description": "FIX protocol"
+        },
+        {
+          "id": 4,
+          "name": "C++",
+          "description": null
+        },
+        {
+          "id": 5,
+          "name": "Analysis",
+          "description": null
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Sam Peters",
+      "email": "sam.peters@credit-suisse.com",
+      "password": "password",
+      "ext_directory_key": null,
+      "ext_photo_link": null,
+      "skills": [
+        {
+          "id": 1,
+          "name": "JAVA",
+          "description": "Java Programming Skills"
+        },
+        {
+          "id": 3,
+          "name": "FIX",
+          "description": "FIX protocol"
+        },
+        {
+          "id": 6,
+          "name": "Angular.JS",
+          "description": null
+        }
+      ]
+    }
+  ]
+}

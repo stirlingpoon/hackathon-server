@@ -1,0 +1,162 @@
+2015-09-01 00:29:36.138+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-09-01 00:29:36.300+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-09-01 00:29:36.302+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/Users/tiger/Development/hackathon/config/db
+    ephemeral=false
+2015-09-01 00:29:36.308+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    NETWORK
+2015-09-01 00:29:36.309+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 16.00 GB
+    Free Physical memory: 16.84 MB
+    Committed virtual memory: 4.32 GB
+    Total swap space: 1.00 GB
+    Free swap space: 963.75 MB
+2015-09-01 00:29:36.313+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 111.53 MB
+    Total memory: 335.00 MB
+    Max   memory: 444.50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=19.00 MB, used=18.86 MB, max=240.00 MB, threshold=0.00 B
+    Memory Pool: Metaspace (Non-heap memory): committed=39.25 MB, used=38.54 MB, max=-1.00 B, threshold=0.00 B
+    Memory Pool: Compressed Class Space (Non-heap memory): committed=7.25 MB, used=7.12 MB, max=1.00 GB, threshold=0.00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=55.50 MB, used=7.56 MB, max=55.50 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=55.50 MB, used=55.48 MB, max=55.50 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=224.00 MB, used=160.43 MB, max=333.50 MB, threshold=0.00 B
+2015-09-01 00:29:36.323+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Mac OS X; version: 10.10.5; arch: x86_64; cpus: 8
+    Max number of file descriptors: 10240
+    Number of open file descriptors: 80
+    Process id: 4747@dymaxion-mpb.spencergoh.com
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Asia/Hong_Kong
+2015-09-01 00:29:36.326+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 25.20-b23
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Djdk.home=, -Djruby.home=/Users/tiger/.rvm/rubies/jruby-1.7.19, -Djruby.script=jruby, -Djruby.shell=/bin/sh, -Djffi.boot.library.path=/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni/Darwin, -Xmx500m, -Xss2048k, -Xbootclasspath/a:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jruby.jar, -Dfile.encoding=UTF-8, -Djruby.compile.mode=OFF, -Djruby.debug.fullTrace=true]
+2015-09-01 00:29:36.328+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-graph-algo-2.2.4.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jfr.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/rt.jar
+     [bootstrap] /Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jruby.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jce.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jsse.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/localedata.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-kernel-2.2.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-unsafe-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/parboiled-scala_2.10-1.1.7.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-csv-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.0-2.0.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nekodtd.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-1.9-2.0.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/server-api-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/opencsv-2.3.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/activerecord-jdbc-adapter-1.3.17/lib/arjdbc/jdbc/adapter_java.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/org/bouncycastle/bcpkix-jdk15on/1.47/bcpkix-jdk15on-1.47.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nokogiri/nokogiri.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/dnsns.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-graph-matching-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/scala-library-2.10.5.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-primitive-collections-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/kryptproviderjdk.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/readline/readline.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/lucene-core-3.6.2.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/jrjackson-0.2.9/lib/jrjackson/jars/jrjackson-1.2.12.jar
+     [loader.2] file:/System/Library/Java/Extensions/MRJToolkit.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/jing.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/charsets.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-jmx-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-udc-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/readline/jline-2.11.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/jfxrt.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/zipfs.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/jopenssl.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/kryptcore.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/json-1.8.3-java/lib/json/ext/parser.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/xercesImpl.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/ruby-debug-base-0.10.6-java/lib/ruby_debug.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/concurrentlinkedhashmap-lru-1.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/thread_safe-0.3.5-java/lib/thread_safe/jruby_cache_backend.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/json-1.8.3-java/lib/json/ext/generator.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/sunrsasign.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nekohtml.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-lucene-index-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/org/bouncycastle/bcprov-jdk15on/1.47/bcprov-jdk15on-1.47.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.1-2.1.8.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-consistency-check-2.2.4.jar
+     [classpath + loader.1] file:/Users/tiger/Development/hackathon/
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/parboiled-core-1.1.7.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-import-tool-2.2.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/nashorn.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/classes
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-io-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/isorelax.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunec.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/resources.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.2-2.2.4.jar
+2015-09-01 00:29:36.330+0000 INFO  [org.neo4j]: Library path:
+    /Users/tiger/Library/Java/Extensions
+    /Library/Java/Extensions
+    /Network/Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+    /Users/tiger/Development/hackathon
+2015-09-01 00:29:36.331+0000 INFO  [org.neo4j]: System.properties:
+    jruby.home = /Users/tiger/.rvm/rubies/jruby-1.7.19
+    sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib
+    user.country.format = HK
+    gopherProxySet = false
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = US
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    user.dir = /Users/tiger/Development/hackathon
+    jdk.home = 
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    jruby.compile.mode = OFF
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    jffi.boot.library.path = /Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni/Darwin
+    user.home = /Users/tiger
+    user.timezone = Asia/Hong_Kong
+    file.encoding = UTF-8
+    jruby.debug.fullTrace = true
+    jruby.script = jruby
+    user.name = tiger
+    jruby.shell = /bin/sh
+    sun.java.command = org/jruby/Main -X+O --1.9 -X+O -e at_exit{sleep(1)};$stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) /Users/tiger/.rvm/gems/jruby-1.7.19/gems/ruby-debug-ide-0.6.0/bin/rdebug-ide --disable-int-handler --evaluation-timeout 10 --rubymine-protocol-extensions --port 58569 --dispatcher-port 58570 -- /Users/tiger/Development/hackathon/bin/rspec /Users/tiger/Development/hackathon/spec/models/member_model_spec.rb --require teamcity/spec/runner/formatter/teamcity/formatter --format Spec::Runner::Formatter::TeamcityFormatter --example Member
+    sun.arch.data.model = 64
+    user.language = en
+    awt.toolkit = sun.lwawt.macosx.LWCToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeBig
+    sun.cpu.endian = little
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    sun.cpu.isalist = 
+2015-09-01 00:29:36.331+0000 INFO  [org.neo4j]: Network information:
+    Interface awdl0:
+        address: fe80:0:0:0:c8bc:cbff:fecf:a8d8%awdl0
+    Interface en0:
+        address: fe80:0:0:0:82e6:50ff:fe00:e634%en0
+        address: 192.168.1.144
+    Interface lo0:
+        address: fe80:0:0:0:0:0:0:1%lo0
+        address: 0:0:0:0:0:0:0:1
+        address: 127.0.0.1

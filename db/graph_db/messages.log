@@ -1,0 +1,1560 @@
+2015-09-01 00:30:37.803+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-09-01 00:30:38.845+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-09-01 00:30:38.846+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/Users/tiger/Development/hackathon/db/graph_db
+    ephemeral=false
+2015-09-01 00:30:38.850+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    NETWORK
+2015-09-01 00:30:38.851+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 16.00 GB
+    Free Physical memory: 30.14 MB
+    Committed virtual memory: 4.33 GB
+    Total swap space: 1.00 GB
+    Free swap space: 963.75 MB
+2015-09-01 00:30:38.855+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 225.57 MB
+    Total memory: 438.00 MB
+    Max   memory: 444.50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=21.25 MB, used=21.07 MB, max=240.00 MB, threshold=0.00 B
+    Memory Pool: Metaspace (Non-heap memory): committed=41.67 MB, used=40.15 MB, max=-1.00 B, threshold=0.00 B
+    Memory Pool: Compressed Class Space (Non-heap memory): committed=7.92 MB, used=7.46 MB, max=1.00 GB, threshold=0.00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=55.50 MB, used=7.69 MB, max=62.00 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=49.00 MB, used=0.00 B, max=49.00 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=333.50 MB, used=205.80 MB, max=333.50 MB, threshold=0.00 B
+2015-09-01 00:30:38.859+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Mac OS X; version: 10.10.5; arch: x86_64; cpus: 8
+    Max number of file descriptors: 10240
+    Number of open file descriptors: 70
+    Process id: 4760@dymaxion-mpb.spencergoh.com
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Asia/Hong_Kong
+2015-09-01 00:30:38.862+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 25.20-b23
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Djdk.home=, -Djruby.home=/Users/tiger/.rvm/rubies/jruby-1.7.19, -Djruby.script=jruby, -Djruby.shell=/bin/sh, -Djffi.boot.library.path=/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni/Darwin, -Xmx500m, -Xss2048k, -Xbootclasspath/a:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jruby.jar, -Dfile.encoding=UTF-8]
+2015-09-01 00:30:38.863+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-graph-algo-2.2.4.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jfr.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/rt.jar
+     [bootstrap] /Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jruby.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jce.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jsse.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/localedata.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-kernel-2.2.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-unsafe-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/parboiled-scala_2.10-1.1.7.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-csv-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.0-2.0.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nekodtd.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-1.9-2.0.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/server-api-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/opencsv-2.3.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/activerecord-jdbc-adapter-1.3.17/lib/arjdbc/jdbc/adapter_java.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/org/bouncycastle/bcpkix-jdk15on/1.47/bcpkix-jdk15on-1.47.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nokogiri/nokogiri.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/dnsns.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-graph-matching-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/scala-library-2.10.5.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-primitive-collections-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/kryptproviderjdk.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/readline/readline.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/lucene-core-3.6.2.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/jrjackson-0.2.9/lib/jrjackson/jars/jrjackson-1.2.12.jar
+     [loader.2] file:/System/Library/Java/Extensions/MRJToolkit.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/jing.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/charsets.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-jmx-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-udc-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/readline/jline-2.11.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/jfxrt.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/zipfs.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/jopenssl.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/kryptcore.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/json-1.8.3-java/lib/json/ext/parser.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/xercesImpl.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/ruby-debug-base-0.10.6-java/lib/ruby_debug.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/concurrentlinkedhashmap-lru-1.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/thread_safe-0.3.5-java/lib/thread_safe/jruby_cache_backend.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/json-1.8.3-java/lib/json/ext/generator.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/sunrsasign.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nekohtml.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-lucene-index-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/org/bouncycastle/bcprov-jdk15on/1.47/bcprov-jdk15on-1.47.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.1-2.1.8.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-consistency-check-2.2.4.jar
+     [classpath + loader.1] file:/Users/tiger/Development/hackathon/
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/parboiled-core-1.1.7.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-import-tool-2.2.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/nashorn.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/classes
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-io-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/isorelax.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunec.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/resources.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.2-2.2.4.jar
+2015-09-01 00:30:38.864+0000 INFO  [org.neo4j]: Library path:
+    /Users/tiger/Library/Java/Extensions
+    /Library/Java/Extensions
+    /Network/Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+    /Users/tiger/Development/hackathon
+2015-09-01 00:30:38.865+0000 INFO  [org.neo4j]: System.properties:
+    jruby.home = /Users/tiger/.rvm/rubies/jruby-1.7.19
+    sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib
+    user.country.format = HK
+    gopherProxySet = false
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = US
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    user.dir = /Users/tiger/Development/hackathon
+    jdk.home = 
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    jffi.boot.library.path = /Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni/Darwin
+    user.home = /Users/tiger
+    user.timezone = Asia/Hong_Kong
+    file.encoding = UTF-8
+    jruby.script = jruby
+    user.name = tiger
+    jruby.shell = /bin/sh
+    sun.java.command = org/jruby/Main -X+O --1.9 -e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) /Users/tiger/Development/hackathon/bin/rspec /Users/tiger/Development/hackathon/spec/models/member_model_spec.rb --require teamcity/spec/runner/formatter/teamcity/formatter --format Spec::Runner::Formatter::TeamcityFormatter --example Member
+    sun.arch.data.model = 64
+    user.language = en
+    awt.toolkit = sun.lwawt.macosx.LWCToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeBig
+    sun.cpu.endian = little
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    sun.cpu.isalist = 
+2015-09-01 00:30:38.865+0000 INFO  [org.neo4j]: Network information:
+    Interface awdl0:
+        address: fe80:0:0:0:c8bc:cbff:fecf:a8d8%awdl0
+    Interface en0:
+        address: fe80:0:0:0:82e6:50ff:fe00:e634%en0
+        address: 192.168.1.144
+    Interface lo0:
+        address: fe80:0:0:0:0:0:0:1%lo0
+        address: 0:0:0:0:0:0:0:1
+        address: 127.0.0.1
+2015-09-01 00:30:38.867+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-09-01 00:30:39.005+0000 INFO  [org.neo4j]: Creating new db @ /Users/tiger/Development/hackathon/db/graph_db/neostore
+2015-09-01 00:30:39.253+0000 INFO  [org.neo4j]: No lucene scan store index found, this might just be first use. Preparing to rebuild.
+2015-09-01 00:30:39.297+0000 INFO  [org.neo4j]: No lucene scan store index found, this might just be first use. Preparing to rebuild.
+2015-09-01 00:30:39.385+0000 INFO  [org.neo4j]: Opened logical log [/Users/tiger/Development/hackathon/db/graph_db/neostore.transaction.db.0] version=0, lastTxId=1 (clean)
+2015-09-01 00:30:39.393+0000 INFO  [org.neo4j]: Missing counts store, rebuilding it.
+2015-09-01 00:30:39.515+0000 INFO  [org.neo4j]: Rebuilding lucene scan store, this may take a while
+2015-09-01 00:30:39.518+0000 INFO  [org.neo4j]: Lucene scan store rebuilt (roughly -1 nodes)
+2015-09-01 00:30:39.528+0000 INFO  [org.neo4j]: Kernel health set to OK
+2015-09-01 00:30:40.345+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2015-09-01 00:30:40.345+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId{creationTime=1441067439004, randomId=2050904738284488274, storeVersion=14969031248344582, upgradeTime=1441067439004, upgradeId=1}
+2015-09-01 00:30:40.345+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.4
+2015-09-01 00:30:40.345+0000 INFO  [org.neo4j]: Neo4j component versions:
+2015-09-01 00:30:40.348+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 1.9 (neo4j-cypher-compiler-1.9), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-09-01 00:30:40.348+0000 INFO  [org.neo4j]:   Neo4j - Consistency Checker (neo4j-consistency-check), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:30:40.348+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.2 (neo4j-cypher-compiler-2.2), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:30:40.348+0000 INFO  [org.neo4j]:   Neo4j - Import Command Line Tool (neo4j-import-tool), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:30:40.348+0000 INFO  [org.neo4j]:   Neo4j - Server API (server-api), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:30:40.348+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:30:40.348+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.1 (neo4j-cypher-compiler-2.1), version: 2.1.8; revision: 2.1.8:2.1-maint:687/5c83ce3a5ddf33259593f719153ce71a6fe89fc7
+2015-09-01 00:30:40.348+0000 INFO  [org.neo4j]:   neo4j-udc, version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:30:40.348+0000 INFO  [org.neo4j]:   Neo4j - Lucene Index (neo4j-lucene-index), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:30:40.348+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.0 (neo4j-cypher-compiler-2.0), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-09-01 00:30:40.348+0000 INFO  [org.neo4j]:   Neo4j - Graph Matching (neo4j-graph-matching), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:30:40.348+0000 INFO  [org.neo4j]:   Neo4j - JMX support (neo4j-jmx), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:30:40.348+0000 INFO  [org.neo4j]:   Neo4j - Cypher (neo4j-cypher), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:30:40.349+0000 INFO  [org.neo4j]:   Neo4j - Graph Algorithms (neo4j-graph-algo), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:30:40.349+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2015-09-01 00:30:40.350+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2015-09-01 00:30:40.351+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.5
+      SchemaStore v0.A.5
+      NodeStore v0.A.5
+      RelationshipStore v0.A.5
+      RelationshipTypeStore v0.A.5
+      LabelTokenStore v0.A.5
+      PropertyStore v0.A.5
+      PropertyIndexStore v0.A.5
+      StringPropertyStore v0.A.5
+      ArrayPropertyStore v0.A.5
+      RelationshipGroupStore v0.A.5
+2015-09-01 00:30:40.351+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2015-09-01 00:30:40.351+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2015-09-01 00:30:40.351+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      SchemaStore: used=1 high=0
+      NodeStore: used=0 high=-1
+      RelationshipStore: used=0 high=-1
+      RelationshipTypeStore: used=0 high=-1
+      LabelTokenStore: used=0 high=-1
+      PropertyStore: used=0 high=-1
+      PropertyIndexStore: used=0 high=-1
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+      RelationshipGroupStore: used=1 high=0
+2015-09-01 00:30:40.352+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2015-09-01 00:30:40.352+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2015-09-01 00:30:40.352+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 439046807552 / 99238260736 / 22
+Storage files: (filename : modification date - size)
+      index:
+      - Total: 2015-09-01T08:30:38+0800 - 0.00 B
+      lock: 2015-09-01T08:30:39+0800 - 0.00 B
+      messages.log: 2015-09-01T08:30:40+0800 - 17.45 kB
+      neostore: 2015-09-01T08:30:39+0800 - 99.00 B
+      neostore.counts.db.a: 2015-09-01T08:30:39+0800 - 114.00 B
+      neostore.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.labeltokenstore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.labeltokenstore.db.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.labeltokenstore.db.names: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.labeltokenstore.db.names.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.nodestore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.nodestore.db.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.nodestore.db.labels: 2015-09-01T08:30:39+0800 - 68.00 B
+      neostore.nodestore.db.labels.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.propertystore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.propertystore.db.arrays: 2015-09-01T08:30:39+0800 - 128.00 B
+      neostore.propertystore.db.arrays.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.propertystore.db.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.propertystore.db.index: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.propertystore.db.index.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.propertystore.db.index.keys: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.propertystore.db.index.keys.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.propertystore.db.strings: 2015-09-01T08:30:39+0800 - 128.00 B
+      neostore.propertystore.db.strings.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.relationshipgroupstore.db: 2015-09-01T08:30:39+0800 - 25.00 B
+      neostore.relationshipgroupstore.db.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.relationshipstore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.relationshipstore.db.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.relationshiptypestore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.relationshiptypestore.db.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.relationshiptypestore.db.names.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.schemastore.db: 2015-09-01T08:30:39+0800 - 64.00 B
+      neostore.schemastore.db.id: 2015-09-01T08:30:39+0800 - 9.00 B
+      neostore.transaction.db.0: 2015-09-01T08:30:39+0800 - 16.00 B
+      schema:
+        label:
+          lucene:
+            write.lock: 2015-09-01T08:30:39+0800 - 0.00 B
+          - Total: 2015-09-01T08:30:39+0800 - 0.00 B
+        - Total: 2015-09-01T08:30:39+0800 - 0.00 B
+      - Total: 2015-09-01T08:30:39+0800 - 0.00 B
+      store_lock: 2015-09-01T08:30:38+0800 - 0.00 B
+2015-09-01 00:33:30.035+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-09-01 00:33:30.149+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-09-01 00:33:30.151+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/Users/tiger/Development/hackathon/db/graph_db
+    ephemeral=false
+2015-09-01 00:33:30.157+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    NETWORK
+2015-09-01 00:33:30.158+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 16.00 GB
+    Free Physical memory: 30.84 MB
+    Committed virtual memory: 4.32 GB
+    Total swap space: 1.00 GB
+    Free swap space: 963.75 MB
+2015-09-01 00:33:30.162+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 206.48 MB
+    Total memory: 444.00 MB
+    Max   memory: 444.50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=21.63 MB, used=21.41 MB, max=240.00 MB, threshold=0.00 B
+    Memory Pool: Metaspace (Non-heap memory): committed=41.67 MB, used=40.15 MB, max=-1.00 B, threshold=0.00 B
+    Memory Pool: Compressed Class Space (Non-heap memory): committed=7.92 MB, used=7.46 MB, max=1.00 GB, threshold=0.00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=55.50 MB, used=26.06 MB, max=56.00 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=55.00 MB, used=0.00 B, max=55.00 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=333.50 MB, used=211.46 MB, max=333.50 MB, threshold=0.00 B
+2015-09-01 00:33:30.167+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Mac OS X; version: 10.10.5; arch: x86_64; cpus: 8
+    Max number of file descriptors: 10240
+    Number of open file descriptors: 70
+    Process id: 4780@dymaxion-mpb.spencergoh.com
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Asia/Hong_Kong
+2015-09-01 00:33:30.170+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 25.20-b23
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Djdk.home=, -Djruby.home=/Users/tiger/.rvm/rubies/jruby-1.7.19, -Djruby.script=jruby, -Djruby.shell=/bin/sh, -Djffi.boot.library.path=/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni/Darwin, -Xmx500m, -Xss2048k, -Xbootclasspath/a:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jruby.jar, -Dfile.encoding=UTF-8]
+2015-09-01 00:33:30.171+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-graph-algo-2.2.4.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jfr.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/rt.jar
+     [bootstrap] /Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jruby.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jce.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jsse.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/localedata.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-kernel-2.2.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-unsafe-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/parboiled-scala_2.10-1.1.7.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-csv-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.0-2.0.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nekodtd.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-1.9-2.0.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/server-api-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/opencsv-2.3.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/activerecord-jdbc-adapter-1.3.17/lib/arjdbc/jdbc/adapter_java.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/org/bouncycastle/bcpkix-jdk15on/1.47/bcpkix-jdk15on-1.47.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nokogiri/nokogiri.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/dnsns.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-graph-matching-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/scala-library-2.10.5.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-primitive-collections-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/kryptproviderjdk.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/readline/readline.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/lucene-core-3.6.2.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/jrjackson-0.2.9/lib/jrjackson/jars/jrjackson-1.2.12.jar
+     [loader.2] file:/System/Library/Java/Extensions/MRJToolkit.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/jing.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/charsets.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-jmx-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-udc-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/readline/jline-2.11.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/jfxrt.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/zipfs.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/jopenssl.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/kryptcore.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/json-1.8.3-java/lib/json/ext/parser.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/xercesImpl.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/ruby-debug-base-0.10.6-java/lib/ruby_debug.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/concurrentlinkedhashmap-lru-1.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/thread_safe-0.3.5-java/lib/thread_safe/jruby_cache_backend.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/json-1.8.3-java/lib/json/ext/generator.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/sunrsasign.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nekohtml.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-lucene-index-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/org/bouncycastle/bcprov-jdk15on/1.47/bcprov-jdk15on-1.47.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.1-2.1.8.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-consistency-check-2.2.4.jar
+     [classpath + loader.1] file:/Users/tiger/Development/hackathon/
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/parboiled-core-1.1.7.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-import-tool-2.2.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/nashorn.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/classes
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-io-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/isorelax.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunec.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/resources.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.2-2.2.4.jar
+2015-09-01 00:33:30.172+0000 INFO  [org.neo4j]: Library path:
+    /Users/tiger/Library/Java/Extensions
+    /Library/Java/Extensions
+    /Network/Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+    /Users/tiger/Development/hackathon
+2015-09-01 00:33:30.172+0000 INFO  [org.neo4j]: System.properties:
+    jruby.home = /Users/tiger/.rvm/rubies/jruby-1.7.19
+    sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib
+    user.country.format = HK
+    gopherProxySet = false
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = US
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    user.dir = /Users/tiger/Development/hackathon
+    jdk.home = 
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    jffi.boot.library.path = /Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni/Darwin
+    user.home = /Users/tiger
+    user.timezone = Asia/Hong_Kong
+    file.encoding = UTF-8
+    jruby.script = jruby
+    user.name = tiger
+    jruby.shell = /bin/sh
+    sun.java.command = org/jruby/Main -X+O --1.9 -e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) /Users/tiger/Development/hackathon/bin/rspec /Users/tiger/Development/hackathon/spec/models/member_model_spec.rb --require teamcity/spec/runner/formatter/teamcity/formatter --format Spec::Runner::Formatter::TeamcityFormatter --example Member
+    sun.arch.data.model = 64
+    user.language = en
+    awt.toolkit = sun.lwawt.macosx.LWCToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeBig
+    sun.cpu.endian = little
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    sun.cpu.isalist = 
+2015-09-01 00:33:30.173+0000 INFO  [org.neo4j]: Network information:
+    Interface awdl0:
+        address: fe80:0:0:0:c8bc:cbff:fecf:a8d8%awdl0
+    Interface en0:
+        address: fe80:0:0:0:82e6:50ff:fe00:e634%en0
+        address: 192.168.1.144
+    Interface lo0:
+        address: fe80:0:0:0:0:0:0:1%lo0
+        address: 0:0:0:0:0:0:0:1
+        address: 127.0.0.1
+2015-09-01 00:33:30.175+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-09-01 00:33:30.595+0000 INFO  [org.neo4j]: No lucene scan store index found, this might just be first use. Preparing to rebuild.
+2015-09-01 00:33:30.701+0000 INFO  [org.neo4j]: Rebuilding lucene scan store, this may take a while
+2015-09-01 00:33:30.708+0000 INFO  [org.neo4j]: Lucene scan store rebuilt (roughly -1 nodes)
+2015-09-01 00:33:30.718+0000 INFO  [org.neo4j]: Kernel health set to OK
+2015-09-01 00:33:31.513+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2015-09-01 00:33:31.513+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId{creationTime=1441067439004, randomId=2050904738284488274, storeVersion=14969031248344582, upgradeTime=1441067439004, upgradeId=1}
+2015-09-01 00:33:31.513+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.4
+2015-09-01 00:33:31.513+0000 INFO  [org.neo4j]: Neo4j component versions:
+2015-09-01 00:33:31.516+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 1.9 (neo4j-cypher-compiler-1.9), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-09-01 00:33:31.517+0000 INFO  [org.neo4j]:   Neo4j - Consistency Checker (neo4j-consistency-check), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:33:31.517+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.2 (neo4j-cypher-compiler-2.2), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:33:31.517+0000 INFO  [org.neo4j]:   Neo4j - Import Command Line Tool (neo4j-import-tool), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:33:31.517+0000 INFO  [org.neo4j]:   Neo4j - Server API (server-api), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:33:31.517+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:33:31.517+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.1 (neo4j-cypher-compiler-2.1), version: 2.1.8; revision: 2.1.8:2.1-maint:687/5c83ce3a5ddf33259593f719153ce71a6fe89fc7
+2015-09-01 00:33:31.517+0000 INFO  [org.neo4j]:   neo4j-udc, version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:33:31.517+0000 INFO  [org.neo4j]:   Neo4j - Lucene Index (neo4j-lucene-index), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:33:31.517+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.0 (neo4j-cypher-compiler-2.0), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-09-01 00:33:31.517+0000 INFO  [org.neo4j]:   Neo4j - Graph Matching (neo4j-graph-matching), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:33:31.517+0000 INFO  [org.neo4j]:   Neo4j - JMX support (neo4j-jmx), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:33:31.517+0000 INFO  [org.neo4j]:   Neo4j - Cypher (neo4j-cypher), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:33:31.517+0000 INFO  [org.neo4j]:   Neo4j - Graph Algorithms (neo4j-graph-algo), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:33:31.517+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2015-09-01 00:33:31.519+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2015-09-01 00:33:31.519+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.5
+      SchemaStore v0.A.5
+      NodeStore v0.A.5
+      RelationshipStore v0.A.5
+      RelationshipTypeStore v0.A.5
+      LabelTokenStore v0.A.5
+      PropertyStore v0.A.5
+      PropertyIndexStore v0.A.5
+      StringPropertyStore v0.A.5
+      ArrayPropertyStore v0.A.5
+      RelationshipGroupStore v0.A.5
+2015-09-01 00:33:31.519+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2015-09-01 00:33:31.520+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2015-09-01 00:33:31.520+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      SchemaStore: used=1 high=0
+      NodeStore: used=0 high=-1
+      RelationshipStore: used=0 high=-1
+      RelationshipTypeStore: used=0 high=-1
+      LabelTokenStore: used=0 high=-1
+      PropertyStore: used=0 high=-1
+      PropertyIndexStore: used=0 high=-1
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+      RelationshipGroupStore: used=1 high=0
+2015-09-01 00:33:31.520+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2015-09-01 00:33:31.520+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2015-09-01 00:33:31.521+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 439046807552 / 99228176384 / 22
+Storage files: (filename : modification date - size)
+      index:
+      - Total: 2015-09-01T08:30:38+0800 - 0.00 B
+      lock: 2015-09-01T08:30:39+0800 - 0.00 B
+      messages.log: 2015-09-01T08:33:31+0800 - 37.50 kB
+      neostore: 2015-09-01T08:30:39+0800 - 99.00 B
+      neostore.counts.db.a: 2015-09-01T08:30:39+0800 - 114.00 B
+      neostore.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.labeltokenstore.db: 2015-09-01T08:33:31+0800 - 8.00 kB
+      neostore.labeltokenstore.db.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.labeltokenstore.db.names: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.labeltokenstore.db.names.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.nodestore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.nodestore.db.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.nodestore.db.labels: 2015-09-01T08:30:39+0800 - 68.00 B
+      neostore.nodestore.db.labels.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.propertystore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.propertystore.db.arrays: 2015-09-01T08:30:39+0800 - 128.00 B
+      neostore.propertystore.db.arrays.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.propertystore.db.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.propertystore.db.index: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.propertystore.db.index.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.propertystore.db.index.keys: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.propertystore.db.index.keys.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.propertystore.db.strings: 2015-09-01T08:30:39+0800 - 128.00 B
+      neostore.propertystore.db.strings.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.relationshipgroupstore.db: 2015-09-01T08:30:39+0800 - 25.00 B
+      neostore.relationshipgroupstore.db.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.relationshipstore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.relationshipstore.db.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.relationshiptypestore.db: 2015-09-01T08:33:31+0800 - 8.00 kB
+      neostore.relationshiptypestore.db.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.relationshiptypestore.db.names.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.schemastore.db: 2015-09-01T08:30:39+0800 - 64.00 B
+      neostore.schemastore.db.id: 2015-09-01T08:33:30+0800 - 9.00 B
+      neostore.transaction.db.0: 2015-09-01T08:30:39+0800 - 16.00 B
+      schema:
+        label:
+          lucene:
+            write.lock: 2015-09-01T08:33:30+0800 - 0.00 B
+          - Total: 2015-09-01T08:33:30+0800 - 0.00 B
+        - Total: 2015-09-01T08:33:30+0800 - 0.00 B
+      - Total: 2015-09-01T08:30:39+0800 - 0.00 B
+      store_lock: 2015-09-01T08:33:30+0800 - 0.00 B
+2015-09-01 00:35:43.927+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-09-01 00:35:44.056+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-09-01 00:35:44.060+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/Users/tiger/Development/hackathon/db/graph_db
+    ephemeral=false
+2015-09-01 00:35:44.069+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    NETWORK
+2015-09-01 00:35:44.070+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 16.00 GB
+    Free Physical memory: 240.16 MB
+    Committed virtual memory: 4.33 GB
+    Total swap space: 1.00 GB
+    Free swap space: 963.75 MB
+2015-09-01 00:35:44.074+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 137.61 MB
+    Total memory: 383.00 MB
+    Max   memory: 444.50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=22.06 MB, used=21.70 MB, max=240.00 MB, threshold=0.00 B
+    Memory Pool: Metaspace (Non-heap memory): committed=41.67 MB, used=40.16 MB, max=-1.00 B, threshold=0.00 B
+    Memory Pool: Compressed Class Space (Non-heap memory): committed=7.92 MB, used=7.46 MB, max=1.00 GB, threshold=0.00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=55.50 MB, used=11.90 MB, max=55.50 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=55.50 MB, used=55.49 MB, max=55.50 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=272.00 MB, used=178.00 MB, max=333.50 MB, threshold=0.00 B
+2015-09-01 00:35:44.079+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Mac OS X; version: 10.10.5; arch: x86_64; cpus: 8
+    Max number of file descriptors: 10240
+    Number of open file descriptors: 70
+    Process id: 4793@dymaxion-mpb.spencergoh.com
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Asia/Hong_Kong
+2015-09-01 00:35:44.082+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 25.20-b23
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Djdk.home=, -Djruby.home=/Users/tiger/.rvm/rubies/jruby-1.7.19, -Djruby.script=jruby, -Djruby.shell=/bin/sh, -Djffi.boot.library.path=/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni/Darwin, -Xmx500m, -Xss2048k, -Xbootclasspath/a:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jruby.jar, -Dfile.encoding=UTF-8]
+2015-09-01 00:35:44.083+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-graph-algo-2.2.4.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jfr.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/rt.jar
+     [bootstrap] /Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jruby.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jce.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jsse.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/localedata.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-kernel-2.2.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-unsafe-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/parboiled-scala_2.10-1.1.7.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-csv-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.0-2.0.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nekodtd.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-1.9-2.0.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/server-api-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/opencsv-2.3.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/activerecord-jdbc-adapter-1.3.17/lib/arjdbc/jdbc/adapter_java.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/org/bouncycastle/bcpkix-jdk15on/1.47/bcpkix-jdk15on-1.47.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nokogiri/nokogiri.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/dnsns.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-graph-matching-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/scala-library-2.10.5.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-primitive-collections-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/kryptproviderjdk.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/readline/readline.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/lucene-core-3.6.2.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/jrjackson-0.2.9/lib/jrjackson/jars/jrjackson-1.2.12.jar
+     [loader.2] file:/System/Library/Java/Extensions/MRJToolkit.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/jing.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/charsets.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-jmx-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-udc-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/readline/jline-2.11.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/jfxrt.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/zipfs.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/jopenssl.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/kryptcore.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/json-1.8.3-java/lib/json/ext/parser.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/xercesImpl.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/ruby-debug-base-0.10.6-java/lib/ruby_debug.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/concurrentlinkedhashmap-lru-1.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/thread_safe-0.3.5-java/lib/thread_safe/jruby_cache_backend.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/json-1.8.3-java/lib/json/ext/generator.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/sunrsasign.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nekohtml.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-lucene-index-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/org/bouncycastle/bcprov-jdk15on/1.47/bcprov-jdk15on-1.47.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.1-2.1.8.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-consistency-check-2.2.4.jar
+     [classpath + loader.1] file:/Users/tiger/Development/hackathon/
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/parboiled-core-1.1.7.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-import-tool-2.2.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/nashorn.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/classes
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-io-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/isorelax.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunec.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/resources.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.2-2.2.4.jar
+2015-09-01 00:35:44.084+0000 INFO  [org.neo4j]: Library path:
+    /Users/tiger/Library/Java/Extensions
+    /Library/Java/Extensions
+    /Network/Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+    /Users/tiger/Development/hackathon
+2015-09-01 00:35:44.084+0000 INFO  [org.neo4j]: System.properties:
+    jruby.home = /Users/tiger/.rvm/rubies/jruby-1.7.19
+    sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib
+    user.country.format = HK
+    gopherProxySet = false
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = US
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    user.dir = /Users/tiger/Development/hackathon
+    jdk.home = 
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    jffi.boot.library.path = /Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni/Darwin
+    user.home = /Users/tiger
+    user.timezone = Asia/Hong_Kong
+    file.encoding = UTF-8
+    jruby.script = jruby
+    user.name = tiger
+    jruby.shell = /bin/sh
+    sun.java.command = org/jruby/Main -X+O --1.9 -e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) /Users/tiger/Development/hackathon/bin/rspec /Users/tiger/Development/hackathon/spec/models/member_model_spec.rb --require teamcity/spec/runner/formatter/teamcity/formatter --format Spec::Runner::Formatter::TeamcityFormatter --example Member
+    sun.arch.data.model = 64
+    user.language = en
+    awt.toolkit = sun.lwawt.macosx.LWCToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeBig
+    sun.cpu.endian = little
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    sun.cpu.isalist = 
+2015-09-01 00:35:44.084+0000 INFO  [org.neo4j]: Network information:
+    Interface awdl0:
+        address: fe80:0:0:0:c8bc:cbff:fecf:a8d8%awdl0
+    Interface en0:
+        address: fe80:0:0:0:82e6:50ff:fe00:e634%en0
+        address: 192.168.1.144
+    Interface lo0:
+        address: fe80:0:0:0:0:0:0:1%lo0
+        address: 0:0:0:0:0:0:0:1
+        address: 127.0.0.1
+2015-09-01 00:35:44.088+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-09-01 00:35:44.528+0000 INFO  [org.neo4j]: No lucene scan store index found, this might just be first use. Preparing to rebuild.
+2015-09-01 00:35:44.653+0000 INFO  [org.neo4j]: Rebuilding lucene scan store, this may take a while
+2015-09-01 00:35:44.660+0000 INFO  [org.neo4j]: Lucene scan store rebuilt (roughly -1 nodes)
+2015-09-01 00:35:44.670+0000 INFO  [org.neo4j]: Kernel health set to OK
+2015-09-01 00:35:45.483+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2015-09-01 00:35:45.483+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId{creationTime=1441067439004, randomId=2050904738284488274, storeVersion=14969031248344582, upgradeTime=1441067439004, upgradeId=1}
+2015-09-01 00:35:45.484+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.4
+2015-09-01 00:35:45.484+0000 INFO  [org.neo4j]: Neo4j component versions:
+2015-09-01 00:35:45.486+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 1.9 (neo4j-cypher-compiler-1.9), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-09-01 00:35:45.487+0000 INFO  [org.neo4j]:   Neo4j - Consistency Checker (neo4j-consistency-check), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:35:45.487+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.2 (neo4j-cypher-compiler-2.2), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:35:45.487+0000 INFO  [org.neo4j]:   Neo4j - Import Command Line Tool (neo4j-import-tool), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:35:45.487+0000 INFO  [org.neo4j]:   Neo4j - Server API (server-api), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:35:45.487+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:35:45.487+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.1 (neo4j-cypher-compiler-2.1), version: 2.1.8; revision: 2.1.8:2.1-maint:687/5c83ce3a5ddf33259593f719153ce71a6fe89fc7
+2015-09-01 00:35:45.487+0000 INFO  [org.neo4j]:   neo4j-udc, version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:35:45.487+0000 INFO  [org.neo4j]:   Neo4j - Lucene Index (neo4j-lucene-index), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:35:45.487+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.0 (neo4j-cypher-compiler-2.0), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-09-01 00:35:45.487+0000 INFO  [org.neo4j]:   Neo4j - Graph Matching (neo4j-graph-matching), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:35:45.487+0000 INFO  [org.neo4j]:   Neo4j - JMX support (neo4j-jmx), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:35:45.487+0000 INFO  [org.neo4j]:   Neo4j - Cypher (neo4j-cypher), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:35:45.487+0000 INFO  [org.neo4j]:   Neo4j - Graph Algorithms (neo4j-graph-algo), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:35:45.487+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2015-09-01 00:35:45.489+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2015-09-01 00:35:45.489+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.5
+      SchemaStore v0.A.5
+      NodeStore v0.A.5
+      RelationshipStore v0.A.5
+      RelationshipTypeStore v0.A.5
+      LabelTokenStore v0.A.5
+      PropertyStore v0.A.5
+      PropertyIndexStore v0.A.5
+      StringPropertyStore v0.A.5
+      ArrayPropertyStore v0.A.5
+      RelationshipGroupStore v0.A.5
+2015-09-01 00:35:45.490+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2015-09-01 00:35:45.490+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2015-09-01 00:35:45.490+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      SchemaStore: used=1 high=0
+      NodeStore: used=0 high=-1
+      RelationshipStore: used=0 high=-1
+      RelationshipTypeStore: used=0 high=-1
+      LabelTokenStore: used=0 high=-1
+      PropertyStore: used=0 high=-1
+      PropertyIndexStore: used=0 high=-1
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+      RelationshipGroupStore: used=1 high=0
+2015-09-01 00:35:45.490+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2015-09-01 00:35:45.490+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2015-09-01 00:35:45.491+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 439046807552 / 99259363328 / 22
+Storage files: (filename : modification date - size)
+      index:
+      - Total: 2015-09-01T08:30:38+0800 - 0.00 B
+      lock: 2015-09-01T08:30:39+0800 - 0.00 B
+      messages.log: 2015-09-01T08:35:45+0800 - 57.56 kB
+      neostore: 2015-09-01T08:30:39+0800 - 99.00 B
+      neostore.counts.db.a: 2015-09-01T08:30:39+0800 - 114.00 B
+      neostore.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.labeltokenstore.db: 2015-09-01T08:33:31+0800 - 8.00 kB
+      neostore.labeltokenstore.db.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.labeltokenstore.db.names: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.labeltokenstore.db.names.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.nodestore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.nodestore.db.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.nodestore.db.labels: 2015-09-01T08:30:39+0800 - 68.00 B
+      neostore.nodestore.db.labels.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.propertystore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.propertystore.db.arrays: 2015-09-01T08:30:39+0800 - 128.00 B
+      neostore.propertystore.db.arrays.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.propertystore.db.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.propertystore.db.index: 2015-09-01T08:33:32+0800 - 8.00 kB
+      neostore.propertystore.db.index.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.propertystore.db.index.keys: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.propertystore.db.index.keys.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.propertystore.db.strings: 2015-09-01T08:30:39+0800 - 128.00 B
+      neostore.propertystore.db.strings.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.relationshipgroupstore.db: 2015-09-01T08:30:39+0800 - 25.00 B
+      neostore.relationshipgroupstore.db.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.relationshipstore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.relationshipstore.db.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.relationshiptypestore.db: 2015-09-01T08:33:31+0800 - 8.00 kB
+      neostore.relationshiptypestore.db.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.relationshiptypestore.db.names.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.schemastore.db: 2015-09-01T08:30:39+0800 - 64.00 B
+      neostore.schemastore.db.id: 2015-09-01T08:35:44+0800 - 9.00 B
+      neostore.transaction.db.0: 2015-09-01T08:30:39+0800 - 16.00 B
+      schema:
+        label:
+          lucene:
+            write.lock: 2015-09-01T08:35:44+0800 - 0.00 B
+          - Total: 2015-09-01T08:35:44+0800 - 0.00 B
+        - Total: 2015-09-01T08:35:44+0800 - 0.00 B
+      - Total: 2015-09-01T08:30:39+0800 - 0.00 B
+      store_lock: 2015-09-01T08:33:30+0800 - 0.00 B
+2015-09-01 00:54:12.509+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-09-01 00:54:12.623+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-09-01 00:54:12.625+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/Users/tiger/Development/hackathon/db/graph_db
+    ephemeral=false
+2015-09-01 00:54:12.631+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    NETWORK
+2015-09-01 00:54:12.632+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 16.00 GB
+    Free Physical memory: 489.89 MB
+    Committed virtual memory: 4.32 GB
+    Total swap space: 1.00 GB
+    Free swap space: 912.25 MB
+2015-09-01 00:54:12.636+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 91.17 MB
+    Total memory: 330.50 MB
+    Max   memory: 444.50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=22.13 MB, used=21.85 MB, max=240.00 MB, threshold=0.00 B
+    Memory Pool: Metaspace (Non-heap memory): committed=41.67 MB, used=40.18 MB, max=-1.00 B, threshold=0.00 B
+    Memory Pool: Compressed Class Space (Non-heap memory): committed=7.92 MB, used=7.46 MB, max=1.00 GB, threshold=0.00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=55.50 MB, used=20.24 MB, max=55.50 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=55.50 MB, used=55.50 MB, max=55.50 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=219.50 MB, used=163.59 MB, max=333.50 MB, threshold=0.00 B
+2015-09-01 00:54:12.640+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Mac OS X; version: 10.10.5; arch: x86_64; cpus: 8
+    Max number of file descriptors: 10240
+    Number of open file descriptors: 70
+    Process id: 4917@dymaxion-mpb.spencergoh.com
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Asia/Hong_Kong
+2015-09-01 00:54:12.643+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 25.20-b23
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Djdk.home=, -Djruby.home=/Users/tiger/.rvm/rubies/jruby-1.7.19, -Djruby.script=jruby, -Djruby.shell=/bin/sh, -Djffi.boot.library.path=/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni/Darwin, -Xmx500m, -Xss2048k, -Xbootclasspath/a:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jruby.jar, -Dfile.encoding=UTF-8]
+2015-09-01 00:54:12.644+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-graph-algo-2.2.4.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jfr.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/rt.jar
+     [bootstrap] /Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jruby.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jce.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jsse.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/localedata.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-kernel-2.2.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-unsafe-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/parboiled-scala_2.10-1.1.7.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-csv-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.0-2.0.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nekodtd.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-1.9-2.0.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/server-api-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/opencsv-2.3.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/activerecord-jdbc-adapter-1.3.17/lib/arjdbc/jdbc/adapter_java.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/org/bouncycastle/bcpkix-jdk15on/1.47/bcpkix-jdk15on-1.47.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nokogiri/nokogiri.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/dnsns.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-graph-matching-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/scala-library-2.10.5.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-primitive-collections-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/kryptproviderjdk.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/readline/readline.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/lucene-core-3.6.2.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/jrjackson-0.2.9/lib/jrjackson/jars/jrjackson-1.2.12.jar
+     [loader.2] file:/System/Library/Java/Extensions/MRJToolkit.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/jing.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/charsets.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-jmx-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-udc-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/readline/jline-2.11.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/jfxrt.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/zipfs.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/jopenssl.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/kryptcore.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/json-1.8.3-java/lib/json/ext/parser.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/xercesImpl.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/ruby-debug-base-0.10.6-java/lib/ruby_debug.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/concurrentlinkedhashmap-lru-1.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/thread_safe-0.3.5-java/lib/thread_safe/jruby_cache_backend.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/json-1.8.3-java/lib/json/ext/generator.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/sunrsasign.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nekohtml.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-lucene-index-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/org/bouncycastle/bcprov-jdk15on/1.47/bcprov-jdk15on-1.47.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.1-2.1.8.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-consistency-check-2.2.4.jar
+     [classpath + loader.1] file:/Users/tiger/Development/hackathon/
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/parboiled-core-1.1.7.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-import-tool-2.2.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/nashorn.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/classes
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-io-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/isorelax.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunec.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/resources.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.2-2.2.4.jar
+2015-09-01 00:54:12.645+0000 INFO  [org.neo4j]: Library path:
+    /Users/tiger/Library/Java/Extensions
+    /Library/Java/Extensions
+    /Network/Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+    /Users/tiger/Development/hackathon
+2015-09-01 00:54:12.645+0000 INFO  [org.neo4j]: System.properties:
+    jruby.home = /Users/tiger/.rvm/rubies/jruby-1.7.19
+    sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib
+    user.country.format = HK
+    gopherProxySet = false
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = US
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    user.dir = /Users/tiger/Development/hackathon
+    jdk.home = 
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    jffi.boot.library.path = /Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni/Darwin
+    user.home = /Users/tiger
+    user.timezone = Asia/Hong_Kong
+    file.encoding = UTF-8
+    jruby.script = jruby
+    user.name = tiger
+    jruby.shell = /bin/sh
+    sun.java.command = org/jruby/Main -X+O --1.9 -e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) /Users/tiger/Development/hackathon/bin/rspec /Users/tiger/Development/hackathon/spec/models/member_model_spec.rb --require teamcity/spec/runner/formatter/teamcity/formatter --format Spec::Runner::Formatter::TeamcityFormatter --backtrace
+    sun.arch.data.model = 64
+    user.language = en
+    awt.toolkit = sun.lwawt.macosx.LWCToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeBig
+    sun.cpu.endian = little
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    sun.cpu.isalist = 
+2015-09-01 00:54:12.645+0000 INFO  [org.neo4j]: Network information:
+    Interface awdl0:
+        address: fe80:0:0:0:c8bc:cbff:fecf:a8d8%awdl0
+    Interface en0:
+        address: fe80:0:0:0:82e6:50ff:fe00:e634%en0
+        address: 192.168.1.144
+    Interface lo0:
+        address: fe80:0:0:0:0:0:0:1%lo0
+        address: 0:0:0:0:0:0:0:1
+        address: 127.0.0.1
+2015-09-01 00:54:12.648+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-09-01 00:54:13.062+0000 INFO  [org.neo4j]: No lucene scan store index found, this might just be first use. Preparing to rebuild.
+2015-09-01 00:54:14.055+0000 INFO  [org.neo4j]: Rebuilding lucene scan store, this may take a while
+2015-09-01 00:54:14.062+0000 INFO  [org.neo4j]: Lucene scan store rebuilt (roughly -1 nodes)
+2015-09-01 00:54:14.072+0000 INFO  [org.neo4j]: Kernel health set to OK
+2015-09-01 00:54:14.913+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2015-09-01 00:54:14.913+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId{creationTime=1441067439004, randomId=2050904738284488274, storeVersion=14969031248344582, upgradeTime=1441067439004, upgradeId=1}
+2015-09-01 00:54:14.913+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.4
+2015-09-01 00:54:14.913+0000 INFO  [org.neo4j]: Neo4j component versions:
+2015-09-01 00:54:14.916+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 1.9 (neo4j-cypher-compiler-1.9), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-09-01 00:54:14.916+0000 INFO  [org.neo4j]:   Neo4j - Consistency Checker (neo4j-consistency-check), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:54:14.916+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.2 (neo4j-cypher-compiler-2.2), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:54:14.916+0000 INFO  [org.neo4j]:   Neo4j - Import Command Line Tool (neo4j-import-tool), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:54:14.916+0000 INFO  [org.neo4j]:   Neo4j - Server API (server-api), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:54:14.916+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:54:14.916+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.1 (neo4j-cypher-compiler-2.1), version: 2.1.8; revision: 2.1.8:2.1-maint:687/5c83ce3a5ddf33259593f719153ce71a6fe89fc7
+2015-09-01 00:54:14.916+0000 INFO  [org.neo4j]:   neo4j-udc, version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:54:14.916+0000 INFO  [org.neo4j]:   Neo4j - Lucene Index (neo4j-lucene-index), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:54:14.916+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.0 (neo4j-cypher-compiler-2.0), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-09-01 00:54:14.916+0000 INFO  [org.neo4j]:   Neo4j - Graph Matching (neo4j-graph-matching), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:54:14.916+0000 INFO  [org.neo4j]:   Neo4j - JMX support (neo4j-jmx), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:54:14.916+0000 INFO  [org.neo4j]:   Neo4j - Cypher (neo4j-cypher), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:54:14.917+0000 INFO  [org.neo4j]:   Neo4j - Graph Algorithms (neo4j-graph-algo), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 00:54:14.917+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2015-09-01 00:54:14.919+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2015-09-01 00:54:14.919+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.5
+      SchemaStore v0.A.5
+      NodeStore v0.A.5
+      RelationshipStore v0.A.5
+      RelationshipTypeStore v0.A.5
+      LabelTokenStore v0.A.5
+      PropertyStore v0.A.5
+      PropertyIndexStore v0.A.5
+      StringPropertyStore v0.A.5
+      ArrayPropertyStore v0.A.5
+      RelationshipGroupStore v0.A.5
+2015-09-01 00:54:14.919+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2015-09-01 00:54:14.919+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2015-09-01 00:54:14.919+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      SchemaStore: used=1 high=0
+      NodeStore: used=0 high=-1
+      RelationshipStore: used=0 high=-1
+      RelationshipTypeStore: used=0 high=-1
+      LabelTokenStore: used=0 high=-1
+      PropertyStore: used=0 high=-1
+      PropertyIndexStore: used=0 high=-1
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+      RelationshipGroupStore: used=1 high=0
+2015-09-01 00:54:14.920+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2015-09-01 00:54:14.920+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2015-09-01 00:54:14.921+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 439046807552 / 99251150848 / 22
+Storage files: (filename : modification date - size)
+      index:
+      - Total: 2015-09-01T08:30:38+0800 - 0.00 B
+      lock: 2015-09-01T08:30:39+0800 - 0.00 B
+      messages.log: 2015-09-01T08:54:14+0800 - 77.62 kB
+      neostore: 2015-09-01T08:30:39+0800 - 99.00 B
+      neostore.counts.db.a: 2015-09-01T08:30:39+0800 - 114.00 B
+      neostore.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.labeltokenstore.db: 2015-09-01T08:35:46+0800 - 8.00 kB
+      neostore.labeltokenstore.db.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.labeltokenstore.db.names: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.labeltokenstore.db.names.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.nodestore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.nodestore.db.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.nodestore.db.labels: 2015-09-01T08:30:39+0800 - 68.00 B
+      neostore.nodestore.db.labels.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.propertystore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.propertystore.db.arrays: 2015-09-01T08:30:39+0800 - 128.00 B
+      neostore.propertystore.db.arrays.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.propertystore.db.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.propertystore.db.index: 2015-09-01T08:35:46+0800 - 8.00 kB
+      neostore.propertystore.db.index.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.propertystore.db.index.keys: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.propertystore.db.index.keys.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.propertystore.db.strings: 2015-09-01T08:30:39+0800 - 128.00 B
+      neostore.propertystore.db.strings.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.relationshipgroupstore.db: 2015-09-01T08:30:39+0800 - 25.00 B
+      neostore.relationshipgroupstore.db.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.relationshipstore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.relationshipstore.db.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.relationshiptypestore.db: 2015-09-01T08:35:46+0800 - 8.00 kB
+      neostore.relationshiptypestore.db.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.relationshiptypestore.db.names.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.schemastore.db: 2015-09-01T08:30:39+0800 - 64.00 B
+      neostore.schemastore.db.id: 2015-09-01T08:54:14+0800 - 9.00 B
+      neostore.transaction.db.0: 2015-09-01T08:30:39+0800 - 16.00 B
+      schema:
+        label:
+          lucene:
+            write.lock: 2015-09-01T08:54:13+0800 - 0.00 B
+          - Total: 2015-09-01T08:54:13+0800 - 0.00 B
+        - Total: 2015-09-01T08:54:13+0800 - 0.00 B
+      - Total: 2015-09-01T08:30:39+0800 - 0.00 B
+      store_lock: 2015-09-01T08:33:30+0800 - 0.00 B
+2015-09-01 01:09:38.974+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-09-01 01:09:39.094+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-09-01 01:09:39.097+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/Users/tiger/Development/hackathon/db/graph_db
+    ephemeral=false
+2015-09-01 01:09:39.105+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    NETWORK
+2015-09-01 01:09:39.106+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 16.00 GB
+    Free Physical memory: 174.29 MB
+    Committed virtual memory: 4.33 GB
+    Total swap space: 1.00 GB
+    Free swap space: 912.25 MB
+2015-09-01 01:09:39.112+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 73.84 MB
+    Total memory: 318.00 MB
+    Max   memory: 444.50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=22.31 MB, used=21.99 MB, max=240.00 MB, threshold=0.00 B
+    Memory Pool: Metaspace (Non-heap memory): committed=41.67 MB, used=40.19 MB, max=-1.00 B, threshold=0.00 B
+    Memory Pool: Compressed Class Space (Non-heap memory): committed=7.92 MB, used=7.46 MB, max=1.00 GB, threshold=0.00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=79.50 MB, used=58.11 MB, max=79.50 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=43.50 MB, used=43.48 MB, max=43.50 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=195.00 MB, used=142.57 MB, max=333.50 MB, threshold=0.00 B
+2015-09-01 01:09:39.117+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Mac OS X; version: 10.10.5; arch: x86_64; cpus: 8
+    Max number of file descriptors: 10240
+    Number of open file descriptors: 70
+    Process id: 5073@dymaxion-mpb.spencergoh.com
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Asia/Hong_Kong
+2015-09-01 01:09:39.120+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 25.20-b23
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Djdk.home=, -Djruby.home=/Users/tiger/.rvm/rubies/jruby-1.7.19, -Djruby.script=jruby, -Djruby.shell=/bin/sh, -Djffi.boot.library.path=/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni/Darwin, -Xmx500m, -Xss2048k, -Xbootclasspath/a:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jruby.jar, -Dfile.encoding=UTF-8]
+2015-09-01 01:09:39.122+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-graph-algo-2.2.4.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jfr.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/rt.jar
+     [bootstrap] /Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jruby.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jce.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jsse.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/localedata.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-kernel-2.2.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-unsafe-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/parboiled-scala_2.10-1.1.7.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-csv-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.0-2.0.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nekodtd.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-1.9-2.0.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/server-api-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/opencsv-2.3.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/activerecord-jdbc-adapter-1.3.17/lib/arjdbc/jdbc/adapter_java.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/org/bouncycastle/bcpkix-jdk15on/1.47/bcpkix-jdk15on-1.47.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nokogiri/nokogiri.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/dnsns.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-graph-matching-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/scala-library-2.10.5.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-primitive-collections-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/kryptproviderjdk.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/readline/readline.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/lucene-core-3.6.2.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/jrjackson-0.2.9/lib/jrjackson/jars/jrjackson-1.2.12.jar
+     [loader.2] file:/System/Library/Java/Extensions/MRJToolkit.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/jing.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/charsets.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-jmx-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-udc-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/readline/jline-2.11.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/jfxrt.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/zipfs.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/jopenssl.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/kryptcore.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/json-1.8.3-java/lib/json/ext/parser.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/xercesImpl.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/ruby-debug-base-0.10.6-java/lib/ruby_debug.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/concurrentlinkedhashmap-lru-1.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/thread_safe-0.3.5-java/lib/thread_safe/jruby_cache_backend.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/json-1.8.3-java/lib/json/ext/generator.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/sunrsasign.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nekohtml.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-lucene-index-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/org/bouncycastle/bcprov-jdk15on/1.47/bcprov-jdk15on-1.47.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.1-2.1.8.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-consistency-check-2.2.4.jar
+     [classpath + loader.1] file:/Users/tiger/Development/hackathon/
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/parboiled-core-1.1.7.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-import-tool-2.2.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/nashorn.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/classes
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-io-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/isorelax.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunec.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/resources.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.2-2.2.4.jar
+2015-09-01 01:09:39.124+0000 INFO  [org.neo4j]: Library path:
+    /Users/tiger/Library/Java/Extensions
+    /Library/Java/Extensions
+    /Network/Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+    /Users/tiger/Development/hackathon
+2015-09-01 01:09:39.124+0000 INFO  [org.neo4j]: System.properties:
+    jruby.home = /Users/tiger/.rvm/rubies/jruby-1.7.19
+    sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib
+    user.country.format = HK
+    gopherProxySet = false
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = US
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    user.dir = /Users/tiger/Development/hackathon
+    jdk.home = 
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    jffi.boot.library.path = /Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni/Darwin
+    user.home = /Users/tiger
+    user.timezone = Asia/Hong_Kong
+    file.encoding = UTF-8
+    jruby.script = jruby
+    user.name = tiger
+    jruby.shell = /bin/sh
+    sun.java.command = org/jruby/Main -X+O --1.9 -e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) /Users/tiger/Development/hackathon/bin/rspec /Users/tiger/Development/hackathon/spec/models/member_model_spec.rb --require teamcity/spec/runner/formatter/teamcity/formatter --format Spec::Runner::Formatter::TeamcityFormatter --backtrace
+    sun.arch.data.model = 64
+    user.language = en
+    awt.toolkit = sun.lwawt.macosx.LWCToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeBig
+    sun.cpu.endian = little
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    sun.cpu.isalist = 
+2015-09-01 01:09:39.124+0000 INFO  [org.neo4j]: Network information:
+    Interface awdl0:
+        address: fe80:0:0:0:c8bc:cbff:fecf:a8d8%awdl0
+    Interface en0:
+        address: fe80:0:0:0:82e6:50ff:fe00:e634%en0
+        address: 192.168.1.144
+    Interface lo0:
+        address: fe80:0:0:0:0:0:0:1%lo0
+        address: 0:0:0:0:0:0:0:1
+        address: 127.0.0.1
+2015-09-01 01:09:39.127+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-09-01 01:09:40.351+0000 INFO  [org.neo4j]: No lucene scan store index found, this might just be first use. Preparing to rebuild.
+2015-09-01 01:09:40.470+0000 INFO  [org.neo4j]: Rebuilding lucene scan store, this may take a while
+2015-09-01 01:09:40.476+0000 INFO  [org.neo4j]: Lucene scan store rebuilt (roughly -1 nodes)
+2015-09-01 01:09:40.485+0000 INFO  [org.neo4j]: Kernel health set to OK
+2015-09-01 01:09:41.351+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2015-09-01 01:09:41.351+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId{creationTime=1441067439004, randomId=2050904738284488274, storeVersion=14969031248344582, upgradeTime=1441067439004, upgradeId=1}
+2015-09-01 01:09:41.351+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.4
+2015-09-01 01:09:41.351+0000 INFO  [org.neo4j]: Neo4j component versions:
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 1.9 (neo4j-cypher-compiler-1.9), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]:   Neo4j - Consistency Checker (neo4j-consistency-check), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.2 (neo4j-cypher-compiler-2.2), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]:   Neo4j - Import Command Line Tool (neo4j-import-tool), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]:   Neo4j - Server API (server-api), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.1 (neo4j-cypher-compiler-2.1), version: 2.1.8; revision: 2.1.8:2.1-maint:687/5c83ce3a5ddf33259593f719153ce71a6fe89fc7
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]:   neo4j-udc, version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]:   Neo4j - Lucene Index (neo4j-lucene-index), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.0 (neo4j-cypher-compiler-2.0), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]:   Neo4j - Graph Matching (neo4j-graph-matching), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]:   Neo4j - JMX support (neo4j-jmx), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]:   Neo4j - Cypher (neo4j-cypher), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]:   Neo4j - Graph Algorithms (neo4j-graph-algo), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:09:41.355+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2015-09-01 01:09:41.357+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2015-09-01 01:09:41.358+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.5
+      SchemaStore v0.A.5
+      NodeStore v0.A.5
+      RelationshipStore v0.A.5
+      RelationshipTypeStore v0.A.5
+      LabelTokenStore v0.A.5
+      PropertyStore v0.A.5
+      PropertyIndexStore v0.A.5
+      StringPropertyStore v0.A.5
+      ArrayPropertyStore v0.A.5
+      RelationshipGroupStore v0.A.5
+2015-09-01 01:09:41.358+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2015-09-01 01:09:41.358+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2015-09-01 01:09:41.358+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      SchemaStore: used=1 high=0
+      NodeStore: used=0 high=-1
+      RelationshipStore: used=0 high=-1
+      RelationshipTypeStore: used=0 high=-1
+      LabelTokenStore: used=0 high=-1
+      PropertyStore: used=0 high=-1
+      PropertyIndexStore: used=0 high=-1
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+      RelationshipGroupStore: used=1 high=0
+2015-09-01 01:09:41.358+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2015-09-01 01:09:41.359+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2015-09-01 01:09:41.359+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 439046807552 / 99280687104 / 22
+Storage files: (filename : modification date - size)
+      index:
+      - Total: 2015-09-01T08:30:38+0800 - 0.00 B
+      lock: 2015-09-01T08:30:39+0800 - 0.00 B
+      messages.log: 2015-09-01T09:09:41+0800 - 97.68 kB
+      neostore: 2015-09-01T08:30:39+0800 - 99.00 B
+      neostore.counts.db.a: 2015-09-01T08:30:39+0800 - 114.00 B
+      neostore.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.labeltokenstore.db: 2015-09-01T08:54:16+0800 - 8.00 kB
+      neostore.labeltokenstore.db.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.labeltokenstore.db.names: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.labeltokenstore.db.names.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.nodestore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.nodestore.db.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.nodestore.db.labels: 2015-09-01T08:30:39+0800 - 68.00 B
+      neostore.nodestore.db.labels.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.propertystore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.propertystore.db.arrays: 2015-09-01T08:30:39+0800 - 128.00 B
+      neostore.propertystore.db.arrays.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.propertystore.db.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.propertystore.db.index: 2015-09-01T08:54:16+0800 - 8.00 kB
+      neostore.propertystore.db.index.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.propertystore.db.index.keys: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.propertystore.db.index.keys.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.propertystore.db.strings: 2015-09-01T08:30:39+0800 - 128.00 B
+      neostore.propertystore.db.strings.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.relationshipgroupstore.db: 2015-09-01T08:30:39+0800 - 25.00 B
+      neostore.relationshipgroupstore.db.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.relationshipstore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.relationshipstore.db.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.relationshiptypestore.db: 2015-09-01T08:54:16+0800 - 8.00 kB
+      neostore.relationshiptypestore.db.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.relationshiptypestore.db.names.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.schemastore.db: 2015-09-01T08:30:39+0800 - 64.00 B
+      neostore.schemastore.db.id: 2015-09-01T09:09:40+0800 - 9.00 B
+      neostore.transaction.db.0: 2015-09-01T08:30:39+0800 - 16.00 B
+      schema:
+        label:
+          lucene:
+            write.lock: 2015-09-01T09:09:40+0800 - 0.00 B
+          - Total: 2015-09-01T09:09:40+0800 - 0.00 B
+        - Total: 2015-09-01T09:09:40+0800 - 0.00 B
+      - Total: 2015-09-01T08:30:39+0800 - 0.00 B
+      store_lock: 2015-09-01T08:33:30+0800 - 0.00 B
+2015-09-01 01:21:01.321+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-09-01 01:21:01.434+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-09-01 01:21:01.435+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/Users/tiger/Development/hackathon/db/graph_db
+    ephemeral=false
+2015-09-01 01:21:01.440+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    NETWORK
+2015-09-01 01:21:01.440+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 16.00 GB
+    Free Physical memory: 309.85 MB
+    Committed virtual memory: 4.33 GB
+    Total swap space: 1.00 GB
+    Free swap space: 912.25 MB
+2015-09-01 01:21:01.444+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 119.69 MB
+    Total memory: 363.50 MB
+    Max   memory: 444.50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=22.00 MB, used=21.86 MB, max=240.00 MB, threshold=0.00 B
+    Memory Pool: Metaspace (Non-heap memory): committed=44.54 MB, used=43.07 MB, max=-1.00 B, threshold=0.00 B
+    Memory Pool: Compressed Class Space (Non-heap memory): committed=8.30 MB, used=7.80 MB, max=1.00 GB, threshold=0.00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=55.50 MB, used=3.26 MB, max=55.50 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=55.50 MB, used=55.48 MB, max=55.50 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=252.50 MB, used=185.07 MB, max=333.50 MB, threshold=0.00 B
+2015-09-01 01:21:01.448+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Mac OS X; version: 10.10.5; arch: x86_64; cpus: 8
+    Max number of file descriptors: 10240
+    Number of open file descriptors: 72
+    Process id: 5116@dymaxion-mpb.spencergoh.com
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Asia/Hong_Kong
+2015-09-01 01:21:01.451+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 25.20-b23
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Djdk.home=, -Djruby.home=/Users/tiger/.rvm/rubies/jruby-1.7.19, -Djruby.script=jruby, -Djruby.shell=/bin/sh, -Djffi.boot.library.path=/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni/Darwin, -Xmx500m, -Xss2048k, -Xbootclasspath/a:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jruby.jar, -Dfile.encoding=UTF-8]
+2015-09-01 01:21:01.452+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-graph-algo-2.2.4.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jfr.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/rt.jar
+     [bootstrap] /Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jruby.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jce.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jsse.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/localedata.jar
+     [loader.0] file:/Users/tiger/Development/hackathon/features/
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-kernel-2.2.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-unsafe-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/parboiled-scala_2.10-1.1.7.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-csv-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.0-2.0.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nekodtd.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-1.9-2.0.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/server-api-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/opencsv-2.3.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/activerecord-jdbc-adapter-1.3.17/lib/arjdbc/jdbc/adapter_java.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/org/bouncycastle/bcpkix-jdk15on/1.47/bcpkix-jdk15on-1.47.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nokogiri/nokogiri.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/dnsns.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-graph-matching-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/scala-library-2.10.5.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-primitive-collections-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/kryptproviderjdk.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/readline/readline.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/lucene-core-3.6.2.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/jrjackson-0.2.9/lib/jrjackson/jars/jrjackson-1.2.12.jar
+     [loader.2] file:/System/Library/Java/Extensions/MRJToolkit.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/jing.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/charsets.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-jmx-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-udc-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/readline/jline-2.11.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/jfxrt.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/zipfs.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/gherkin-2.12.2-java/lib/gherkin.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/jopenssl.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/kryptcore.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/json-1.8.3-java/lib/json/ext/parser.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/xercesImpl.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/ruby-debug-base-0.10.6-java/lib/ruby_debug.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/concurrentlinkedhashmap-lru-1.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/thread_safe-0.3.5-java/lib/thread_safe/jruby_cache_backend.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/json-1.8.3-java/lib/json/ext/generator.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/sunrsasign.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/nekohtml.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-lucene-index-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/ruby/shared/org/bouncycastle/bcprov-jdk15on/1.47/bcprov-jdk15on-1.47.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.1-2.1.8.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-consistency-check-2.2.4.jar
+     [classpath + loader.1] file:/Users/tiger/Development/hackathon/
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/parboiled-core-1.1.7.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-import-tool-2.2.4.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/nashorn.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/classes
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-io-2.2.4.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/nokogiri-1.6.6.2-java/lib/isorelax.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunec.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/resources.jar
+     [loader.0] file:/Users/tiger/.rvm/gems/jruby-1.7.19/gems/neo4j-community-2.2.4.1/lib/neo4j-community/jars/neo4j-cypher-compiler-2.2-2.2.4.jar
+2015-09-01 01:21:01.453+0000 INFO  [org.neo4j]: Library path:
+    /Users/tiger/Library/Java/Extensions
+    /Library/Java/Extensions
+    /Network/Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+    /Users/tiger/Development/hackathon
+2015-09-01 01:21:01.453+0000 INFO  [org.neo4j]: System.properties:
+    jruby.home = /Users/tiger/.rvm/rubies/jruby-1.7.19
+    sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib
+    user.country.format = HK
+    gopherProxySet = false
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = US
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    user.dir = /Users/tiger/Development/hackathon
+    jdk.home = 
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    jffi.boot.library.path = /Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni:/Users/tiger/.rvm/rubies/jruby-1.7.19/lib/jni/Darwin
+    user.home = /Users/tiger
+    user.timezone = Asia/Hong_Kong
+    file.encoding = UTF-8
+    jruby.script = jruby
+    user.name = tiger
+    jruby.shell = /bin/sh
+    sun.java.command = org/jruby/Main -X+O --1.9 -e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) /Users/tiger/Development/hackathon/script/cucumber /Users/tiger/Development/hackathon/features/members.feature --format Teamcity::Cucumber::Formatter --expand --name ^List all members$ --color -r features
+    sun.arch.data.model = 64
+    user.language = en
+    awt.toolkit = sun.lwawt.macosx.LWCToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeBig
+    sun.cpu.endian = little
+    sun.cpu.isalist = 
+2015-09-01 01:21:01.453+0000 INFO  [org.neo4j]: Network information:
+    Interface awdl0:
+        address: fe80:0:0:0:c8bc:cbff:fecf:a8d8%awdl0
+    Interface lo0:
+        address: fe80:0:0:0:0:0:0:1%lo0
+        address: 0:0:0:0:0:0:0:1
+        address: 127.0.0.1
+2015-09-01 01:21:01.456+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-09-01 01:21:01.751+0000 INFO  [org.neo4j]: No lucene scan store index found, this might just be first use. Preparing to rebuild.
+2015-09-01 01:21:01.847+0000 INFO  [org.neo4j]: Rebuilding lucene scan store, this may take a while
+2015-09-01 01:21:01.853+0000 INFO  [org.neo4j]: Lucene scan store rebuilt (roughly -1 nodes)
+2015-09-01 01:21:01.860+0000 INFO  [org.neo4j]: Kernel health set to OK
+2015-09-01 01:21:03.153+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2015-09-01 01:21:03.154+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId{creationTime=1441067439004, randomId=2050904738284488274, storeVersion=14969031248344582, upgradeTime=1441067439004, upgradeId=1}
+2015-09-01 01:21:03.154+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.4
+2015-09-01 01:21:03.154+0000 INFO  [org.neo4j]: Neo4j component versions:
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 1.9 (neo4j-cypher-compiler-1.9), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]:   Neo4j - Consistency Checker (neo4j-consistency-check), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.2 (neo4j-cypher-compiler-2.2), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]:   Neo4j - Import Command Line Tool (neo4j-import-tool), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]:   Neo4j - Server API (server-api), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.1 (neo4j-cypher-compiler-2.1), version: 2.1.8; revision: 2.1.8:2.1-maint:687/5c83ce3a5ddf33259593f719153ce71a6fe89fc7
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]:   neo4j-udc, version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]:   Neo4j - Lucene Index (neo4j-lucene-index), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.0 (neo4j-cypher-compiler-2.0), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]:   Neo4j - Graph Matching (neo4j-graph-matching), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]:   Neo4j - JMX support (neo4j-jmx), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]:   Neo4j - Cypher (neo4j-cypher), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]:   Neo4j - Graph Algorithms (neo4j-graph-algo), version: 2.2.4; revision: 2.2.4:2.2:110/57edd480e2d0684ccdc602ad736c5da7812daa99-dirty
+2015-09-01 01:21:03.157+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2015-09-01 01:21:03.159+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2015-09-01 01:21:03.160+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.5
+      SchemaStore v0.A.5
+      NodeStore v0.A.5
+      RelationshipStore v0.A.5
+      RelationshipTypeStore v0.A.5
+      LabelTokenStore v0.A.5
+      PropertyStore v0.A.5
+      PropertyIndexStore v0.A.5
+      StringPropertyStore v0.A.5
+      ArrayPropertyStore v0.A.5
+      RelationshipGroupStore v0.A.5
+2015-09-01 01:21:03.160+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2015-09-01 01:21:03.160+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2015-09-01 01:21:03.160+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      SchemaStore: used=1 high=0
+      NodeStore: used=0 high=-1
+      RelationshipStore: used=0 high=-1
+      RelationshipTypeStore: used=0 high=-1
+      LabelTokenStore: used=0 high=-1
+      PropertyStore: used=0 high=-1
+      PropertyIndexStore: used=0 high=-1
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+      RelationshipGroupStore: used=1 high=0
+2015-09-01 01:21:03.160+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2015-09-01 01:21:03.161+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2015-09-01 01:21:03.161+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 439046807552 / 99278757888 / 22
+Storage files: (filename : modification date - size)
+      index:
+      - Total: 2015-09-01T08:30:38+0800 - 0.00 B
+      lock: 2015-09-01T08:30:39+0800 - 0.00 B
+      messages.log: 2015-09-01T09:21:03+0800 - 117.58 kB
+      neostore: 2015-09-01T08:30:39+0800 - 99.00 B
+      neostore.counts.db.a: 2015-09-01T08:30:39+0800 - 114.00 B
+      neostore.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.labeltokenstore.db: 2015-09-01T09:21:03+0800 - 8.00 kB
+      neostore.labeltokenstore.db.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.labeltokenstore.db.names: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.labeltokenstore.db.names.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.nodestore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.nodestore.db.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.nodestore.db.labels: 2015-09-01T08:30:39+0800 - 68.00 B
+      neostore.nodestore.db.labels.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.propertystore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.propertystore.db.arrays: 2015-09-01T08:30:39+0800 - 128.00 B
+      neostore.propertystore.db.arrays.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.propertystore.db.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.propertystore.db.index: 2015-09-01T09:21:03+0800 - 8.00 kB
+      neostore.propertystore.db.index.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.propertystore.db.index.keys: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.propertystore.db.index.keys.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.propertystore.db.strings: 2015-09-01T08:30:39+0800 - 128.00 B
+      neostore.propertystore.db.strings.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.relationshipgroupstore.db: 2015-09-01T08:30:39+0800 - 25.00 B
+      neostore.relationshipgroupstore.db.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.relationshipstore.db: 2015-09-01T08:30:39+0800 - 0.00 B
+      neostore.relationshipstore.db.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.relationshiptypestore.db: 2015-09-01T09:21:03+0800 - 8.00 kB
+      neostore.relationshiptypestore.db.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2015-09-01T08:30:39+0800 - 38.00 B
+      neostore.relationshiptypestore.db.names.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.schemastore.db: 2015-09-01T08:30:39+0800 - 64.00 B
+      neostore.schemastore.db.id: 2015-09-01T09:21:01+0800 - 9.00 B
+      neostore.transaction.db.0: 2015-09-01T08:30:39+0800 - 16.00 B
+      schema:
+        label:
+          lucene:
+            write.lock: 2015-09-01T09:21:01+0800 - 0.00 B
+          - Total: 2015-09-01T09:21:01+0800 - 0.00 B
+        - Total: 2015-09-01T09:21:01+0800 - 0.00 B
+      - Total: 2015-09-01T08:30:39+0800 - 0.00 B
+      store_lock: 2015-09-01T08:33:30+0800 - 0.00 B

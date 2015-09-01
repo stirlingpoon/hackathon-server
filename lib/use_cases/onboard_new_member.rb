@@ -1,0 +1,2 @@
+class OnboardNewMember
+end
